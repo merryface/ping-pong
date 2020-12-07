@@ -1,45 +1,47 @@
-const App = () => (
-  <>
-      {/* header */}
-      <header className="jumbotron mt-4 mb-0">
-          <h1>PongPing</h1>
-      </header>
+import './App.css';
 
-      {/* scores */}
-      <div className="row mb-4">
-          <div className="col-md-6 mt-4">
-              <div className="card text-center bg-dark text-white">
-                  <h5 className="card-header">Player 1</h5>
-                  <div className="card-body">
-                      <p className="card-text display-1">{/* player1 score */}</p>
-                  </div>
-                  <div className="card-footer">
-                      <button className="form-control btn btn-success">+</button>
-                  </div>
-              </div>
-          </div>
+const App = ({player1Score, player2Score}) => (
+    <>
+        {/* header */}
+        <header className="jumbotron mt-4 mb-0">
+            <h1>PongPing</h1>
+        </header>
 
-          <div className="col-md-6 mt-4">
-              <div className="card text-center">
-                  <h5 className="card-header">Player 2</h5>
-                  <div className="card-body">
-                      <p className="card-text display-1">{/* player2 score */}</p>
-                  </div>
-                  <div className="card-footer">
-                      <button className="form-control btn btn-success">+</button>
-                  </div>
-              </div>
-          </div>
-      </div>
+        {/* scores */}
+        <div className="row mb-4">
+            <div className="col-md-6 mt-4">
+                <div className="card text-center bg-dark text-white">
+                    <h5 className="card-header">Player 1</h5>
+                    <div className="card-body">
+                        <p className="card-text display-1">{ player1Score }</p>
+                    </div>
+                    <div className="card-footer">
+                        <button className="form-control btn btn-success">+</button>
+                    </div>
+                </div>
+            </div>
 
-      { /* winner message */}
-      <h2 className="alert alert-success">Player {/* winning player here */} wins!</h2>
+            <div className="col-md-6 mt-4">
+                <div className="card text-center">
+                    <h5 className="card-header">Player 2</h5>
+                    <div className="card-body">
+                        <p className="card-text display-1">{ player2Score }</p>
+                    </div>
+                    <div className="card-footer">
+                        <button className="form-control btn btn-success">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-      <hr />
+        { /* winner message */}
+        <h2 className="alert alert-success">Player {/* winning player here */} wins!</h2>
 
-      { /* reset button */}
-      <button className="btn btn-danger">Reset</button>
-  </>
+        <hr />
+
+        { /* reset button */}
+        <button className="btn btn-danger">Reset</button>
+    </>
 );
 
 export default App;

@@ -13,6 +13,8 @@ let state = store.getState();
       <App
       player1Score = { state.player1 }
       player2Score = { state.player2 }
+      incrementPlayer1 = { () => store.dispatch({ type: "INCREMENTPLAYER1"}) }
+      incrementPlayer2 = { () => store.dispatch({ type: "INCREMENTPLAYER2"}) }
       // pass functions in here
       />
     </React.StrictMode>,

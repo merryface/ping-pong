@@ -1,6 +1,6 @@
 import './App.css';
 
-const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, reset}) => (
+const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, reset, server}) => (
     <>
         {/* header */}
         <header className="jumbotron mt-4 mb-0">
@@ -10,7 +10,7 @@ const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, re
         {/* scores */}
         <div className="row mb-4">
             <div className="col-md-6 mt-4">
-                <div className="card text-center bg-dark text-white">
+                <div className={ "card text-center " + (server === 1 ? "bg-dark text-white" : "") }>
                     <h5 className="card-header">Player 1</h5>
                     <div className="card-body">
                         <p className="card-text display-1">{ player1Score }</p>
@@ -22,7 +22,7 @@ const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, re
             </div>
 
             <div className="col-md-6 mt-4">
-                <div className="card text-center">
+                <div className={ "card text-center " + (server !== 1 ? "bg-dark text-white" : "") }>
                     <h5 className="card-header">Player 2</h5>
                     <div className="card-body">
                         <p className="card-text display-1">{ player2Score }</p>

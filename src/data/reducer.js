@@ -10,15 +10,33 @@ let serveChange = (state) => ({
     server: (totalScore(state) % alternate === 0) ? (state.serving === 1 ? 2 : 1) : state.serving
 })
 
+let winScore = 21;
+let scoreDiff = (state) => Math.abs(state.player1 - state.player2);
+
+let winner = (state) => {
+    if (state.player1 >= winScore && scoreDiff(state) >= 2) {
+        return "1";
+    }
+    if (state.player2 >= winScore && scoreDiff(state) >= 2) {
+        return "2";
+    }
+    return "";
+}
+
+let declareWinner = (state) => ({
+    ...state,
+    winner: winner(state)
+})
+
 let reducer = (state, action) => {
     switch (action.type) {
         case "INCREMENTPLAYER1":
-            return serveChange(player1(state));
+            return declareWinner(serveChange(player1(state)));
 
         case "INCREMENTPLAYER2":
-            return serveChange(player2(state));
+            return declareWinner(serveChange(player2(state)));
 
-        case "RESET": return initialState; 
+        case "RESET": return initialState;
 
         default: return state;
     }

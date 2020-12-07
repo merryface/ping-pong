@@ -17,6 +17,7 @@ let state = store.getState();
       incrementPlayer1 = { () => store.dispatch({ type: "INCREMENTPLAYER1"}) }
       incrementPlayer2 = { () => store.dispatch({ type: "INCREMENTPLAYER2"}) }
       reset = { () => store.dispatch({ type: "RESET"}) }
+      winner = { state.winner }
       // pass functions in here
       />
     </React.StrictMode>,

@@ -1,6 +1,6 @@
 import './App.css';
 
-const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, reset, server}) => (
+const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, reset, server, winner}) => (
     <>
         {/* header */}
         <header className="jumbotron mt-4 mb-0">
@@ -35,7 +35,7 @@ const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, re
         </div>
 
         { /* winner message */}
-        <h2 className="alert alert-success">Player {/* winning player here */} wins!</h2>
+        <h2 className={winner ? "alert alert-success" : "d-none"}>Player { winner } wins!</h2>
 
         <hr />
 

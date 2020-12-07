@@ -1,6 +1,6 @@
 import './App.css';
 
-const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2}) => (
+const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, reset}) => (
     <>
         {/* header */}
         <header className="jumbotron mt-4 mb-0">
@@ -16,7 +16,7 @@ const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2}) =
                         <p className="card-text display-1">{ player1Score }</p>
                     </div>
                     <div className="card-footer">
-                        <button className="form-control btn btn-success" onClick= { incrementPlayer1 }>+</button>
+                        <button className="form-control btn btn-success" onClick = { incrementPlayer1 }>+</button>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@ const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2}) =
                         <p className="card-text display-1">{ player2Score }</p>
                     </div>
                     <div className="card-footer">
-                        <button className="form-control btn btn-success" onClick= { incrementPlayer2 }>+</button>
+                        <button className="form-control btn btn-success" onClick = { incrementPlayer2 }>+</button>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@ const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2}) =
         <hr />
 
         { /* reset button */}
-        <button className="btn btn-danger">Reset</button>
+        <button className="btn btn-danger" onClick= { reset }>Reset</button>
     </>
 );
 

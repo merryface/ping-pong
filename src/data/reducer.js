@@ -1,5 +1,7 @@
 let reducer = (state, action) => {
-    console.log("hello, world");
+    switch (action.type) {
+        default: return state;
+    }
 };
 
 export default reducer;

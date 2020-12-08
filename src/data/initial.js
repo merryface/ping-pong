@@ -2,7 +2,7 @@ const initialState = {
     player1: 0,
     player2: 0,
     server: 1,
-    winner: "",
+    winner: 0,
 };
 
 export default initialState;

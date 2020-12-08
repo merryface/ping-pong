@@ -16,7 +16,7 @@ const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, re
                         <p className="card-text display-1">{ player1Score }</p>
                     </div>
                     <div className="card-footer">
-                        <button className="form-control btn btn-success" onClick = { incrementPlayer1 }>+</button>
+                        <button disabled= {winner ? true : false} className="form-control btn btn-success" onClick = { incrementPlayer1 }>+</button>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@ const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, re
                         <p className="card-text display-1">{ player2Score }</p>
                     </div>
                     <div className="card-footer">
-                        <button className="form-control btn btn-success" onClick = { incrementPlayer2 }>+</button>
+                        <button disabled= {winner ? true : false} className="form-control btn btn-success" onClick = { incrementPlayer2 }>+</button>
                     </div>
                 </div>
             </div>

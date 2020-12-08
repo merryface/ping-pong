@@ -3,6 +3,7 @@ import './App.css';
 // Components
 import Score from './components/Score';
 import WinMessage from './components/WinMessage';
+import Reset from './components/Reset';
 
 const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, reset, server, winner}) => (
     <>
@@ -35,8 +36,7 @@ const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, re
         <hr />
 
         { /* reset button */}
-        <button className="btn btn-danger" onClick= { reset }>Reset</button>
-
+        <Reset handleReset = {reset} />
 
     </>
 );

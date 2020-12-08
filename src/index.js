@@ -13,7 +13,7 @@ let state = store.getState();
       <App
       player1Score = { state.player1 }
       player2Score = { state.player2 }
-      server = { state.server }
+      p1Serving = { state.p1Serving }
       incrementPlayer1 = { () => store.dispatch({ type: "INCREMENTPLAYER1"}) }
       incrementPlayer2 = { () => store.dispatch({ type: "INCREMENTPLAYER2"}) }
       reset = { () => store.dispatch({ type: "RESET"}) }

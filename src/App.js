@@ -5,7 +5,7 @@ import Score from './components/Score';
 import WinMessage from './components/WinMessage';
 import Reset from './components/Reset';
 
-const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, reset, server, winner}) => (
+const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, reset, p1Serving, winner}) => (
     <>
         {/* header */}
         <header className="jumbotron mt-4 mb-0">
@@ -17,7 +17,7 @@ const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, re
             <Score
                 playerScore = {player1Score}
                 player = {1}
-                server = {server}
+                server = {p1Serving}
                 winner = {winner}
                 handleIncrement = {incrementPlayer1}
             />
@@ -25,7 +25,7 @@ const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, re
             <Score
                 playerScore = {player2Score}
                 player = {2}
-                server = {server}
+                server = {!p1Serving}
                 winner = {winner}
                 handleIncrement = {incrementPlayer2}
             />          

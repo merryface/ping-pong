@@ -10,4 +10,10 @@ let mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(Score);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleIncrement: () => dispatch({ type: "INCREMENTPLAYER2" }),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Score);

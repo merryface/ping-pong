@@ -6,7 +6,7 @@ import Player2 from './components/Player2';
 import WinMessage from './components/WinMessage';
 import Reset from './components/Reset';
 
-const App = ({incrementPlayer1, incrementPlayer2, reset}) => (
+const App = () => (
     <>
         {/* header */}
         <header className="jumbotron mt-4 mb-0">
@@ -15,13 +15,9 @@ const App = ({incrementPlayer1, incrementPlayer2, reset}) => (
 
         {/* scores */}
         <div className="row mb-4">
-            <Player1
-                handleIncrement = {incrementPlayer1}
-            />
+            <Player1 />
 
-            <Player2
-                handleIncrement = {incrementPlayer2}
-            />          
+            <Player2 />          
         </div>
 
         { /* winner message */}
@@ -29,7 +25,7 @@ const App = ({incrementPlayer1, incrementPlayer2, reset}) => (
         <hr />
 
         { /* reset button */}
-        <Reset handleReset = {reset} />
+        <Reset />
 
     </>
 );

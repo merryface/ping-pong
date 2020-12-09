@@ -9,5 +9,10 @@ let mapStateToProps = (state) => {
         winner: state.winner,
     }
 }
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleIncrement: () => dispatch({ type: "INCREMENTPLAYER1"}),
+    }
+}
 
-export default connect(mapStateToProps)(Score);
+export default connect(mapStateToProps, mapDispatchToProps)(Score);

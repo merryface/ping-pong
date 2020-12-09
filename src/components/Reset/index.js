@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Reset from '../Reset'
+import Reset from './Reset'
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -7,4 +7,5 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapDispatchToProps)(Reset);
+// connect expects two arguments
+export default connect(null, mapDispatchToProps)(Reset);

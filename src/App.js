@@ -8,6 +8,7 @@ import Reset from './components/Reset';
 
 const App = () => (
     <>
+    {/* replace all this with ternary to show either game or settings */}
         {/* header */}
         <header className="jumbotron mt-4 mb-0">
             <h1>PongPing</h1>

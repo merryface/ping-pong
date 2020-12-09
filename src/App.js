@@ -18,7 +18,7 @@ const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, re
                 playerScore = {player1Score}
                 player = {1}
                 server = {p1Serving}
-                winner = {winner}
+                winner = { winner }
                 handleIncrement = {incrementPlayer1}
             />
 
@@ -26,13 +26,13 @@ const App = ({player1Score, player2Score, incrementPlayer1, incrementPlayer2, re
                 playerScore = {player2Score}
                 player = {2}
                 server = {!p1Serving}
-                winner = {winner}
+                winner = { winner }
                 handleIncrement = {incrementPlayer2}
             />          
         </div>
 
         { /* winner message */}
-        <WinMessage winner = { winner } /> 
+        <WinMessage />
         <hr />
 
         { /* reset button */}

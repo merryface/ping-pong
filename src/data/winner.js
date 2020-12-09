@@ -1,4 +1,5 @@
-let winScore = 21;
+import winScore from './winScore';
+
 let scoreDiff = (state) => Math.abs(state.player1 - state.player2);
 
 let winner = (state) => {

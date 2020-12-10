@@ -1,6 +1,6 @@
-let WinMessage = ({winner}) => (
+let WinMessage = ({winner, playerName}) => (
     <>
-        <h2 className={winner !== 0 ? "alert alert-success" : "d-none"}>Player { winner } wins!</h2>
+        <h2 className={winner !== 0 ? "alert alert-success" : "d-none"}>{ playerName } wins!</h2>
     </>
 )
 

@@ -1,7 +1,8 @@
 let saveSettings = (state, action) => {
     return {
         ...state,
-        ...action.settings
+        ...action.settings, 
+        gameStarted: true
     }
 }
 

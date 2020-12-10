@@ -47,14 +47,14 @@ class Settings extends Component {
     handleWinningScore(e) {
         let score = e.currentTarget.value;
         this.setState({
-            winScore : score,
+            winScore : +score,
         });
     }
 
     handleAlternate(e) {
         let alternate = e.currentTarget.value;
         this.setState({
-            alternateOn : alternate,
+            alternateOn : +alternate,
         });
     }
 

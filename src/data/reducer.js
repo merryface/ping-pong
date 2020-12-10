@@ -4,6 +4,7 @@ import serveChange from './server';
 import player1 from './player1Score';
 import player2 from './player2Score';
 import recordGame from './recordGame';
+import saveSettings from './saveSettings';
 
 
 //reducer
@@ -17,7 +18,7 @@ let reducer = (state, action) => {
 
         case "RESET": return initialState;
 
-        // case "SAVESETTINGS": return initialState;
+        case "SAVESETTINGS": return saveSettings(state, action);
 
         default: return state;
     }

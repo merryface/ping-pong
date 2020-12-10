@@ -1,10 +1,10 @@
 let totalScore = (state) => state.player1 + state.player2;
 
 let alternate = (state) => {
-    if (state.player1 >= 20 && state.player2 >= 20) {
+    if (state.player1 >= (state.winScore-1) && state.player2 >= (state.winScore-1)) {
         return 2;
     }
-    return 5;
+    return state.alternateOn;
 }
 
 let serveChange = (state) => (

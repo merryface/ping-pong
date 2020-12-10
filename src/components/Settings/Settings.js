@@ -18,6 +18,7 @@ class Settings extends Component {
             player2Name: "",
             winScore: 21,
             alternateOn: 5,
+            gameStarted: false
         };
 
         // binding the methods so that can be used without
@@ -61,6 +62,10 @@ class Settings extends Component {
         // This prevents the button from refreshing since this is where the on-click for this method is set to
         e.preventDefault(); //this can be used on any element with default functionality
         this.props.handleSaveSettings(this.state);
+
+        this.setState({
+            gameStarted : true,
+        });
     }
 
     render() {

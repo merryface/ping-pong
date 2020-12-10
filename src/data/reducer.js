@@ -17,6 +17,8 @@ let reducer = (state, action) => {
 
         case "RESET": return initialState;
 
+        // case "SAVESETTINGS": return initialState;
+
         default: return state;
     }
 };

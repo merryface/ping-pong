@@ -6,7 +6,7 @@ const initialState = {
     p1Serving: true,
     winner: 0,
     alternateOn: 5,
-    record: ["fake value",],
+    record: [],
     winScore: 21
 };
 

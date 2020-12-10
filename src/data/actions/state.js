@@ -16,3 +16,10 @@ export let player2 = () => {
         type: "INCREMENTPLAYER2"
     }
 }
+
+export let form = ( {settings} ) => {
+    return {
+        type: "SAVESETTINGS",
+        settings: settings,
+    }
+}

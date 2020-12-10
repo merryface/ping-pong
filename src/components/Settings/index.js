@@ -1,9 +1,11 @@
 import { connect } from 'react-redux';
 import Settings from './Settings'
+import { form } from '../../data/actions/state';
+
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleSaveSettings: (settings) => dispatch({ type: "SAVESETTINGS", settings}),
+        handleSaveSettings: (settings) => dispatch(form(settings)),
     }
 }
 

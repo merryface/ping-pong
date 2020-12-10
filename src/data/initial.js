@@ -13,6 +13,9 @@ const initialState = {
     
     winner: 0,
     record: [],
+    gameID: 1,
+
+    loaded: false,
 };
 
 export default initialState;

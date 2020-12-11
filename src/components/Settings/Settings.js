@@ -16,9 +16,8 @@ class Settings extends Component {
         this.state = {
             player1Name: "",
             player2Name: "",
-            winScore: 21,
-            alternateOn: 5,
-            gameStarted: false
+            winScore: "21",
+            alternateOn: "5",
         };
 
         // binding the methods so that can be used without
@@ -47,25 +46,21 @@ class Settings extends Component {
     handleWinningScore(e) {
         let score = e.currentTarget.value;
         this.setState({
-            winScore : +score,
+            winScore : score,
         });
     }
 
     handleAlternate(e) {
         let alternate = e.currentTarget.value;
         this.setState({
-            alternateOn : +alternate,
+            alternateOn : alternate,
         });
     }
 
     startGame(e) {
         // This prevents the button from refreshing since this is where the on-click for this method is set to
         e.preventDefault(); //this can be used on any element with default functionality
-        this.props.handleSaveSettings(this.state);
-
-        this.setState({
-            gameStarted : true,
-        });
+        this.props.handleSaveSettings({...this.state});
     }
 
     render() {

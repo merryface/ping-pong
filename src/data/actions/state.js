@@ -5,21 +5,24 @@ export let reset = () => {
     }
 }
 
-export let player1 = () => {
+export let incrementPlayer1 = () => {
     return {
         type: "INCREMENTPLAYER1"
     }
 }
 
-export let player2 = () => {
+export let incrementPlayer2 = () => {
     return {
         type: "INCREMENTPLAYER2"
     }
 }
 
-export let form = ( {settings} ) => {
+export let form = ({ player1Name, player2Name, winScore, alternateOn }) => {
     return {
         type: "SAVESETTINGS",
-        settings: settings,
+        player1Name,
+        player2Name,
+        winScore: +winScore,
+        alternateOn: +alternateOn,
     }
 }

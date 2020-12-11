@@ -1,7 +1,10 @@
-let saveSettings = (state, action) => {
+let saveSettings = (state, { player1Name, player2Name, winScore, alternateOn }) => {
     return {
         ...state,
-        ...action.settings, 
+        player1Name,
+        player2Name,
+        winScore,
+        alternateOn,
         gameStarted: true
     }
 }
